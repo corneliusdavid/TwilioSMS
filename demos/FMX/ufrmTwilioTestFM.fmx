@@ -1,0 +1,211 @@
+object frmTwilioTestFM: TfrmTwilioTestFM
+  Left = 0
+  Top = 0
+  Caption = 'TabbedForm'
+  ClientHeight = 567
+  ClientWidth = 384
+  FormFactor.Width = 1440
+  FormFactor.Height = 900
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  DesignerMasterStyle = 0
+  object HeaderToolBar: TToolBar
+    Anchors = []
+    Size.Width = 384.000000000000000000
+    Size.Height = 48.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object lblToolBar: TLabel
+      Align = Contents
+      StyledSettings = [FontColor]
+      Size.Width = 384.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'toollabel'
+      TextSettings.Font.Family = 'Verdana'
+      TextSettings.Font.Size = 22.000000000000000000
+      TextSettings.HorzAlign = Center
+      Text = 'Twilio Send Text Message'
+    end
+  end
+  object tabCtrlTwilioMain: TTabControl
+    Align = Client
+    FullSize = True
+    Size.Width = 384.000000000000000000
+    Size.Height = 519.000000000000000000
+    Size.PlatformDefault = False
+    TabHeight = 49.000000000000000000
+    TabIndex = 0
+    TabOrder = 1
+    TabPosition = PlatformDefault
+    Sizes = (
+      384s
+      470s
+      384s
+      470s)
+    object tabTwilioText: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = True
+      Size.Width = 191.000000000000000000
+      Size.Height = 49.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'tabitemtoprated'
+      TabOrder = 0
+      Text = 'Message'
+      ExplicitSize.cx = 50.000000000000000000
+      ExplicitSize.cy = 49.000000000000000000
+      object lblRecipientPhoneNumber: TLabel
+        Position.X = 40.000000000000000000
+        Position.Y = 31.000000000000000000
+        Size.Width = 185.000000000000000000
+        Size.Height = 17.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'Recipient'#39's Phone Number:'
+        TabOrder = 0
+      end
+      object edtRecipientPhoneNumber: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        TabOrder = 1
+        MaxLength = 12
+        Position.X = 40.000000000000000000
+        Position.Y = 55.000000000000000000
+        Size.Width = 177.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+      end
+      object btnTwilioSendText: TButton
+        StyledSettings = [Family, Style, FontColor]
+        ImageIndex = 0
+        Position.X = 40.000000000000000000
+        Position.Y = 263.000000000000000000
+        Size.Width = 113.000000000000000000
+        Size.Height = 42.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 2
+        Text = 'Send'
+        TextSettings.Font.Size = 16.000000000000000000
+      end
+      object lblMessageToSend: TLabel
+        Position.X = 40.000000000000000000
+        Position.Y = 95.000000000000000000
+        Size.Width = 185.000000000000000000
+        Size.Height = 17.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'Message to send:'
+        TabOrder = 3
+      end
+      object edtTwilioTextMessage: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Anchors = [akLeft, akTop, akRight]
+        TabOrder = 4
+        MaxLength = 12
+        Position.X = 40.000000000000000000
+        Position.Y = 119.000000000000000000
+        Size.Width = 313.000000000000000000
+        Size.Height = 90.000000000000000000
+        Size.PlatformDefault = False
+      end
+    end
+    object tabTwilioConfig: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = False
+      Size.Width = 191.000000000000000000
+      Size.Height = 49.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'tabitemcontacts'
+      TabOrder = 0
+      Text = 'Config'
+      ExplicitSize.cx = 50.000000000000000000
+      ExplicitSize.cy = 49.000000000000000000
+      object edtTwilioAccountSID: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Anchors = [akLeft, akTop, akRight]
+        TabOrder = 0
+        Text = 'ACf812989a01aa3f68488a58c933899307'
+        Position.X = 40.000000000000000000
+        Position.Y = 55.000000000000000000
+        Size.Width = 313.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        OnExit = edtTwilioExitSave
+      end
+      object edtTwilioAccountPassword: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Anchors = [akLeft, akTop, akRight]
+        TabOrder = 1
+        Text = 'bb11bf33046ea5f886142b56ef26b64a'
+        Position.X = 40.000000000000000000
+        Position.Y = 119.000000000000000000
+        Size.Width = 313.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        OnExit = edtTwilioExitSave
+      end
+      object lblTwilioAccountSID: TLabel
+        Position.X = 40.000000000000000000
+        Position.Y = 31.000000000000000000
+        Text = 'Twilio Account SID:'
+        TabOrder = 2
+      end
+      object lblTwilioPassword: TLabel
+        Position.X = 40.000000000000000000
+        Position.Y = 95.000000000000000000
+        Size.Width = 185.000000000000000000
+        Size.Height = 17.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'Twilio Account Password:'
+        TabOrder = 3
+      end
+      object lblTwillioPhoneNumber: TLabel
+        Position.X = 40.000000000000000000
+        Position.Y = 175.000000000000000000
+        Size.Width = 185.000000000000000000
+        Size.Height = 17.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'Twilio Phone Number:'
+        TabOrder = 4
+      end
+      object edtTwilioPhoneNumber: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        TabOrder = 5
+        MaxLength = 12
+        Text = '15036476295'
+        Position.X = 40.000000000000000000
+        Position.Y = 199.000000000000000000
+        Size.Width = 177.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        OnExit = edtTwilioExitSave
+      end
+      object edtConfigFilename: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Align = Bottom
+        TabOrder = 6
+        Position.Y = 424.000000000000000000
+        Size.Width = 384.000000000000000000
+        Size.Height = 46.000000000000000000
+        Size.PlatformDefault = False
+      end
+    end
+  end
+  object GestureManager: TGestureManager
+    Sensitivity = 80.000000000000000000
+    Left = 320
+    Top = 88
+    GestureData = <
+      item
+        Control = Owner
+        Collection = <
+          item
+            GestureID = sgiLeft
+          end
+          item
+            GestureID = sgiRight
+          end>
+      end>
+  end
+end
